@@ -27,10 +27,6 @@ class App extends React.Component {
 		}
 	}
 
-	componentWillMount() {
-		document.title = 'MoverUp'
-	}
-
 	render() {
 		return (
 			<div style={{position: 'absolute', top: 0, right: 0, left: 0}}>
