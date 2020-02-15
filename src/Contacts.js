@@ -102,11 +102,11 @@ export default class Contacts extends React.Component {
 
     render() {
         return (
-            <div style={{width: '100vw', display: 'flex', justifyContent: 'center', marginTop: '8vh', left: 0, position: 'relative'}}>
+            <div style={{width: '100vw', display: 'flex', justifyContent: 'center', marginTop: '8vh', left: 0, position: 'relative', minHeight: '72vh'}}>
                 <div style={{display: 'flex', flexDirection: "column", width: '50vw', alignItems: 'center'}}>
-                    <b style={{marginTop: '2vh'}}>
-                        Contact Us
-                    </b>
+                    <h2 style={{marginTop: '2vh'}}>
+                        Contact us
+                    </h2>
                     <TextField
                     id={this.state.error && this.state.error_types.full_name ? "outlined-error" : "outlined-basic"}
                     error={this.state.error && this.state.error_types.full_name}
