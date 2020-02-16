@@ -77,8 +77,8 @@ class App extends React.Component {
 
 	outputFooter = () => {
 		return (
-			<div style={{ display: 'flex', flex: 7, alignItems: 'center', flexDirection: 'column', minHeight: '20vh', width: '100vw', justifyContent: 'center', backgroundColor: 'rgba(235,235,235,1)' }}>
-				<div style={{ display: 'flex', flex: 6, flexDirection: 'row', minHeight: '15vh', width: this.state.isSmall ? '90vw' : '75vw', alignItems: 'center' }}>
+			<div style={{ display: 'flex', flex: 7, alignItems: 'center', flexDirection: 'column', minHeight: '20vh', width: '100vw', justifyContent: 'center', backgroundColor: 'rgba(255,255,255,1)' }}>
+				<div style={{ display: 'flex', flex: 6, flexDirection: 'row', minHeight: '15vh', width: this.state.isSmall ? '90vw' : '75vw', alignItems: 'center', maxWidth: 960, marginTop: 40 }}>
 					<div style={{ display: 'flex', flex: 1, minHeight: '15vh', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start' }}>
 						<div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
 							<b style={{ fontSize: 20, marginBottom: 10 }}>MoverUp</b>
@@ -107,8 +107,8 @@ class App extends React.Component {
 						</div>
 					</div>
 				</div>
-				<div style={{ height: 1, width: this.state.isSmall ? '90vw' : '70vw', backgroundColor: 'lightgray' }} />
-				<div style={{ flex: 2, display: 'flex', flexDirection: 'row', width: this.state.isSmall ? '90vw' : '70vw' }}>
+				<div style={{ height: 1, width: this.state.isSmall ? '90vw' : '70vw', backgroundColor: 'lightgray', maxWidth: 960 }} />
+				<div style={{ flex: 2, display: 'flex', flexDirection: 'row', width: this.state.isSmall ? '90vw' : '70vw', maxWidth: 960 }}>
 					<div style={{ flex: 1 }}>
 						<b style={{ fontWeight: 'normal', fontSize: 14, textAlign: 'start' }}>© 2020 MoverUp</b>
 					</div>
@@ -129,16 +129,16 @@ class App extends React.Component {
 
 	outputJoinUs = () => {
 		return (
-			<div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', minHeight: '20vh', width: '100vw', justifyContent: 'center', backgroundColor: 'orange' }}>
-				<div style={{ display: 'flex', alignItems: 'center', flexDirection: 'row', justifyContent: 'space-around' }}>
-					<ButtonBase style={{ outline: 'none', margin: 7 }} onClick={() => this.state.text === "For movers" ? window.open("https://play.google.com/store/apps/details?id=com.moverup.mover") : alert("Company is not available for Android yet. Sorry for the inconvenience.")}>
+			<div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', minHeight: '20vh', width: '100vw', justifyContent: 'center', backgroundColor: '#fde992' }}>
+				<Typography style={{ fontWeight: '600'}}>Apply to be a tester</Typography>
+				<div style={{ display: 'flex', alignItems: 'center', flexDirection: this.state.isSmall ? "column" : 'row', justifyContent: 'space-around' }}>
+					<ButtonBase style={{ outline: 'none', margin: 10 }} onClick={() => this.state.text === "For movers" ? window.open("https://play.google.com/store/apps/details?id=com.moverup.formovers") : window.open("https://play.google.com/store/apps/details?id=com.moverup.company")}>
 						<img alt="" src={require('./Images/apple_logo.png')} style={{ width: 180, height: 55 }} />
 					</ButtonBase>
-					<ButtonBase style={{ outline: 'none', margin: 7 }} onClick={() => this.state.text === "For movers" ? window.open("https://testflight.apple.com/join/lue7aG4i") : window.open("https://testflight.apple.com/join/VzfTqKpZ")}>
+					<ButtonBase style={{ outline: 'none', margin: 10 }} onClick={() => this.state.text === "For movers" ? window.open("https://testflight.apple.com/join/lue7aG4i") : window.open("https://testflight.apple.com/join/VzfTqKpZ")}>
 						<img alt="" src={require('./Images/android_logo.png')} style={{ width: 180, height: 55 }} />
 					</ButtonBase>
 				</div>
-				<Typography style={{marginTop: 25, fontWeight: '600'}}>Apply to be a tester</Typography>
 			</div>
 		)
 	}
@@ -161,7 +161,7 @@ class App extends React.Component {
 										</Link>
 									</ButtonBase>
 									<Dropdown
-										style={{ flex: 5, display: 'flex', justifyContent: 'center' }}
+										style={{ flex: 5, display: 'flex', justifyContent: 'center', border: '0 !important' }}
 									>
 										<Dropdown.Toggle style={{ backgroundColor: 'inherit', borderColor: 'inherit' }}>
 											<b style={{ color: 'black' }}>{this.state.text}</b>
