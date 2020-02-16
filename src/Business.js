@@ -57,7 +57,7 @@ export default class Business extends React.Component {
                                     </div>
                                     <div style={{ flex: 3 }}>
                                         <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', minHeight: '15vh', justifyContent: 'space-around' }}>
-                                            <ButtonBase style={{ outline: 'none', margin: 7 }} onClick={() => window.open("https://play.google.com/store/apps/details?id=com.moverup.company")}>
+                                            <ButtonBase style={{ outline: 'none', margin: 7 }} onClick={() => alert("Company is not available on the Google Play Store yet. Sorry for the inconvenience.")}>
                                                 <img alt="" src={require('./Images/apple_logo.png')} style={{ width: this.state.logo_width, height: this.state.logo_height }} />
                                             </ButtonBase>
                                             <ButtonBase style={{ outline: 'none', margin: 7 }} onClick={() => window.open("https://testflight.apple.com/join/VzfTqKpZ")}>
@@ -77,7 +77,7 @@ export default class Business extends React.Component {
                                     </div>
                                     <div style={{ flex: 3 }}>
                                         <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', minHeight: '15vh', justifyContent: 'space-around' }}>
-                                            <ButtonBase style={{ outline: 'none', margin: 7 }} onClick={() => window.open("https://play.google.com/store/apps/details?id=com.moverup.company")}>
+                                            <ButtonBase style={{ outline: 'none', margin: 7 }} onClick={() => alert("Company is not available on the Google Play Store yet. Sorry for the inconvenience.")}>
                                                 <img alt="" src={require('./Images/apple_logo.png')} style={{ width: this.state.logo_width, height: this.state.logo_height }} />
                                             </ButtonBase>
                                             <ButtonBase style={{ outline: 'none', margin: 7 }} onClick={() => window.open("https://testflight.apple.com/join/VzfTqKpZ")}>

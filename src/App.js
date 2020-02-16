@@ -26,26 +26,26 @@ class App extends React.Component {
 	}
 
 	constructor(props) {
-        super(props);
-        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
-    }
+		super(props);
+		this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+	}
 
-    componentDidMount() {
-        this.updateWindowDimensions();
-        window.addEventListener('resize', this.updateWindowDimensions);
-    }
+	componentDidMount() {
+		this.updateWindowDimensions();
+		window.addEventListener('resize', this.updateWindowDimensions);
+	}
 
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.updateWindowDimensions);
-    }
+	componentWillUnmount() {
+		window.removeEventListener('resize', this.updateWindowDimensions);
+	}
 
-    updateWindowDimensions() {
-        if (window.innerWidth < 750) {
-            this.setState({ ...this.state, isSmall: true });
-        } else {
-            this.setState({ ...this.state, isSmall: false });
-        }
-    }
+	updateWindowDimensions() {
+		if (window.innerWidth < 750) {
+			this.setState({ ...this.state, isSmall: true });
+		} else {
+			this.setState({ ...this.state, isSmall: false });
+		}
+	}
 
 	outputBottom = () => {
 		return (
@@ -82,10 +82,10 @@ class App extends React.Component {
 					<div style={{ display: 'flex', flex: 1, minHeight: '15vh', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start' }}>
 						<div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
 							<b style={{ fontSize: 20, marginBottom: 10 }}>MoverUp</b>
-							<Link to="/movers" style={{ textDecoration: 'none', color: '#5b638f', marginTop: 2.5, marginBottom: 2.5 }}>
+							<Link to="/movers" onClick={() => this.setState({ text: "For movers", contacts: false })} style={{ textDecoration: 'none', color: '#5b638f', marginTop: 2.5, marginBottom: 2.5 }}>
 								For movers
 							</Link>
-							<Link to="/business" style={{ textDecoration: 'none', color: '#5b638f', marginTop: 2.5, marginBottom: 2.5 }}>
+							<Link to="/business" onClick={() => this.setState({ text: "For business", contacts: false })} style={{ textDecoration: 'none', color: '#5b638f', marginTop: 2.5, marginBottom: 2.5 }}>
 								For business
 							</Link>
 						</div>
@@ -130,9 +130,9 @@ class App extends React.Component {
 	outputJoinUs = () => {
 		return (
 			<div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', minHeight: '20vh', width: '100vw', justifyContent: 'center', backgroundColor: '#fde992' }}>
-				<Typography style={{ fontWeight: '600'}}>Apply to be a tester</Typography>
+				<Typography style={{ fontWeight: '600' }}>Apply to be a tester</Typography>
 				<div style={{ display: 'flex', alignItems: 'center', flexDirection: this.state.isSmall ? "column" : 'row', justifyContent: 'space-around' }}>
-					<ButtonBase style={{ outline: 'none', margin: 10 }} onClick={() => this.state.text === "For movers" ? window.open("https://play.google.com/store/apps/details?id=com.moverup.formovers") : window.open("https://play.google.com/store/apps/details?id=com.moverup.company")}>
+					<ButtonBase style={{ outline: 'none', margin: 10 }} onClick={() => this.state.text === "For movers" ? window.open("https://play.google.com/store/apps/details?id=com.moverup.mover") : alert("Company is not available on the Google Play Store yet. Sorry for the inconvenience.")}>
 						<img alt="" src={require('./Images/apple_logo.png')} style={{ width: 180, height: 55 }} />
 					</ButtonBase>
 					<ButtonBase style={{ outline: 'none', margin: 10 }} onClick={() => this.state.text === "For movers" ? window.open("https://testflight.apple.com/join/lue7aG4i") : window.open("https://testflight.apple.com/join/VzfTqKpZ")}>
@@ -156,35 +156,61 @@ class App extends React.Component {
 										disableRipple={true}
 										onClick={() => this.setState({ text: "For movers", contacts: false })}
 									>
-										<Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
-											<b>Mover<b style={{ color: 'orange' }}>Up</b></b>
+										<Link to="/" style={{ textDecoration: 'none', color: 'black', fontWeight: '600' }}>
+											Mover<b style={{ color: 'orange', fontWeight: '600' }}>Up</b>
 										</Link>
 									</ButtonBase>
-									<Dropdown
-										style={{ flex: 5, display: 'flex', justifyContent: 'center', border: '0 !important' }}
-									>
-										<Dropdown.Toggle style={{ backgroundColor: 'inherit', borderColor: 'inherit' }}>
-											<b style={{ color: 'black' }}>{this.state.text}</b>
-										</Dropdown.Toggle>
-										<Dropdown.Menu>
-											<Dropdown.Item>
-												<Link to="/movers" onClick={() => this.setState({ text: "For movers", contacts: false })} style={{ textDecoration: 'none', color: 'black' }}>
-													For movers
-												</Link>
-											</Dropdown.Item>
-											<Dropdown.Item>
-												<Link to="/business" onClick={() => this.setState({ text: "For business", contacts: false })} style={{ textDecoration: 'none', color: 'black' }}>
-													For business
-												</Link>
-											</Dropdown.Item>
-										</Dropdown.Menu>
-									</Dropdown>
+									<div style={{flex: 6, display: 'flex'}}>
+										{
+											this.state.isSmall ? 
+											<React.Fragment>
+												<ButtonBase
+													style={{ flex: 3, display: 'flex', justifyContent: 'center', outline: 'none', margin: 5 }}
+													disableRipple={true}
+												>
+													<Link to="/movers" onClick={() => this.setState({ text: "For movers", contacts: false })} style={{ textDecoration: 'none', color: 'black', fontWeight: '600', color: this.state.text === "For movers" ? 'orange' : 'black' }}>
+														I need a job
+													</Link>
+												</ButtonBase>
+												<ButtonBase
+													style={{ flex: 3, display: 'flex', justifyContent: 'center', outline: 'none', margin: 5 }}
+													disableRipple={true}
+												>
+													<Link to="/business" onClick={() => this.setState({ text: "For business", contacts: false })} style={{ textDecoration: 'none', color: 'black', fontWeight: '600', color: this.state.text === "For business" ? 'orange' : 'black' }}>
+														I need a mover
+													</Link>
+												</ButtonBase>
+											</React.Fragment>
+											:
+											<React.Fragment>
+												<div style={{flex: 1, display: 'flex'}}>
+													<ButtonBase
+														style={{ flex: 3, display: 'flex', justifyContent: 'center', outline: 'none', margin: 5 }}
+														disableRipple={true}
+													>
+														<Link to="/movers" onClick={() => this.setState({ text: "For movers", contacts: false })} style={{ textDecoration: 'none', color: 'black', fontWeight: '600', color: this.state.text === "For movers" ? 'orange' : 'black' }}>
+															I need a job
+														</Link>
+													</ButtonBase>
+													<ButtonBase
+														style={{ flex: 3, display: 'flex', justifyContent: 'center', outline: 'none', margin: 5 }}
+														disableRipple={true}
+													>
+														<Link to="/business" onClick={() => this.setState({ text: "For business", contacts: false })} style={{ textDecoration: 'none', color: 'black', fontWeight: '600', color: this.state.text === "For business" ? 'orange' : 'black' }}>
+															I need a mover
+														</Link>
+													</ButtonBase>
+												</div>
+												<div style={{flex: 1, display: 'flex'}}></div>
+											</React.Fragment>
+										}
+									</div>
 									<ButtonBase
-										style={{ flex: 5, display: 'flex', justifyContent: 'center', outline: 'none' }}
+										style={{ flex: 3, display: 'flex', justifyContent: 'center', outline: 'none' }}
 										disableRipple={true}
 									>
-										<Link to="/contact" onClick={() => this.setState({ ...this.state, contacts: true })} style={{ textDecoration: 'none', color: 'black' }}>
-											<b>Contacts</b>
+										<Link to="/contact" onClick={() => this.setState({ ...this.state, contacts: true })} style={{ textDecoration: 'none', color: 'black', fontWeight: '600' }}>
+											Contacts
 										</Link>
 									</ButtonBase>
 								</div>

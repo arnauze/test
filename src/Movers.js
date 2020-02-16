@@ -49,15 +49,14 @@ export default class Movers extends React.Component {
                 <div style={{ minHeight: '75vh', width: '100vw', display: 'flex', alignItems: 'center', left: 0, position: 'relative', backgroundImage: 'url(' + MOVER + ')', backgroundPosition: 'center', backgroundSize: 'cover', flexDirection: "column", marginTop: '8vh', justifyContent: 'center' }}>
                     <div style={{width: this.state.type === "column" ? '90vw' : '70vw', display: 'flex', alignItems: 'center', flexDirection: this.state.type, justifyContent: 'center'}} >
                         <div style={{ display: 'flex', flex: 7, alignItems: 'center', flexDirection: 'column', minHeight: '30vh', justifyContent: 'space-evenly' }}>
-                            <b style={{ textAlign: 'center', margin: 7, fontSize: this.state.type === 'column' ? 40 : 60, fontWeight: '600' }}>Jobs for movers!</b>
+                            <b style={{ textAlign: 'center', margin: 7, fontSize: this.state.type === 'column' ? 40 : 60, fontWeight: '600' }}>Mover<b style={{ color: 'orange', fontWeight: '600' }}>Up</b> <br />Jobs for movers!</b>
                             <b style={{ textAlign: 'center', fontWeight: 'normal', margin: 7, fontSize: this.state.type === 'column' ? 20 : 25, }}>
-                                MoverUp helps you find jobs as a mover anytime, anywhere.<br />
-                                Download the app, create your schedule and we will find a job for you.
+                            You can be your own boss and enjoy the flexibility of choosing when, where, and how much you earn. All you need is a smartphone to start making money.<br /> It’s that simple.
                             </b>
                         </div>
                         <div style={{ flex: 3 }}>
                             <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', minHeight: '15vh', justifyContent: 'space-around' }}>
-                                <ButtonBase style={{ outline: 'none', margin: 7 }} onClick={() => window.open("https://play.google.com/store/apps/details?id=com.moverup.formovers")}>
+                                <ButtonBase style={{ outline: 'none', margin: 7 }} onClick={() => window.open("https://play.google.com/store/apps/details?id=com.moverup.mover")}>
                                     <img alt="" src={require('./Images/apple_logo.png')} style={{ width: this.state.logo_width, height: this.state.logo_height }} />
                                 </ButtonBase>
                                 <ButtonBase style={{ outline: 'none', margin: 7 }} onClick={() => window.open("https://testflight.apple.com/join/lue7aG4i")}>
@@ -80,36 +79,36 @@ export default class Movers extends React.Component {
                                 <div style={{ minHeight: '35vh', display: 'flex', flexDirection: 'column' }}>
                                     <div style={{ display: 'flex', flex: 1, alignItems: 'center', width: '100%', flexDirection: 'column', margin: 5 }}>
                                         <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img alt="" src={require('./Images/schedule.png')} style={{ width: 60, height: 60, aspectRatio: 6 / 6 }} /></div>
-                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><h4 style={{ textAlign: 'center' }}>Flexible schedule</h4></div>
-                                        <div style={{ flex: 2, display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: 10, paddingTop: 0 }}><p style={{ textAlign: 'center' }}><Typography style={{ textAlign: 'flex-start', marginTop: 10, color: 'gray', fontWeight: '300' }}>With MoverUp, you decide when you want to work, and we will find a job for you. Work from anywhere, anytime.</Typography></p></div>
+                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><h4 style={{ textAlign: 'center' }}>Stay flexible</h4></div>
+                                        <div style={{ flex: 2, display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: 10, paddingTop: 0 }}><p style={{ textAlign: 'center' }}><Typography style={{ textAlign: 'flex-start', marginTop: 10, color: 'gray', fontWeight: '300' }}>Choose your own hours and enjoy the freedom of working from anywhere: near home or in a city you're just visiting.</Typography></p></div>
+                                    </div>
+                                    <div style={{ display: 'flex', flex: 1, alignItems: 'center', width: '100%', flexDirection: 'column', margin: 5 }}>
+                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img alt="" src={require('./Images/easy_to_use.png')} style={{ width: 50, height: 50, aspectRatio: 6 / 6 }} /></div>
+                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><h4 style={{ textAlign: 'center' }}>Easy to get started</h4></div>
+                                        <div style={{ flex: 2, display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: 10, paddingTop: 0 }}><p style={{ textAlign: 'center' }}><Typography style={{ textAlign: 'flex-start', marginTop: 10, color: 'gray', fontWeight: '300' }}>Just sign up with your name, email and phone number and get access to all available jobs around you.</Typography></p></div>
                                     </div>
                                     <div style={{ display: 'flex', flex: 1, alignItems: 'center', width: '100%', flexDirection: 'column', margin: 5 }}>
                                         <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img alt="" src={require('./Images/cash.png')} style={{ width: 60, height: 60, aspectRatio: 6 / 6 }} /></div>
-                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><h4 style={{ textAlign: 'center' }}>Lot of jobs</h4></div>
-                                        <div style={{ flex: 2, display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: 10, paddingTop: 0 }}><p style={{ textAlign: 'center' }}><Typography style={{ textAlign: 'flex-start', marginTop: 10, color: 'gray', fontWeight: '300' }}>Hundreds of businesses hiring thousands of workers everyday. We will find the perfect match for you.</Typography></p></div>
-                                    </div>
-                                    <div style={{ display: 'flex', flex: 1, alignItems: 'center', width: '100%', flexDirection: 'column', margin: 5 }}>
-                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img alt="" src={require('./Images/trust.png')} style={{ width: 60, height: 60, aspectRatio: 6 / 6 }} /></div>
-                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><h4 style={{ textAlign: 'center' }}>Trusted employers</h4></div>
-                                        <div style={{ flex: 2, display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: 10, paddingTop: 0 }}><p style={{ textAlign: 'center' }}><Typography style={{ textAlign: 'flex-start', marginTop: 10, color: 'gray', fontWeight: '300' }}>We only work with trusted businesses and so will you.</Typography></p></div>
+                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><h4 style={{ textAlign: 'center' }}>Achieve your goals</h4></div>
+                                        <div style={{ flex: 2, display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: 10, paddingTop: 0 }}><p style={{ textAlign: 'center' }}><Typography style={{ textAlign: 'flex-start', marginTop: 10, color: 'gray', fontWeight: '300' }}>Earn extra money for your goals. Hundreds of businesses are hiring thousands of workers every day. We will find the perfect match just for you.</Typography></p></div>
                                     </div>
                                 </div>
                                 :
                                 <React.Fragment>
                                     <div style={{ display: 'flex', flex: 1, alignItems: 'center', margin: 5, width: '100%' }}>
                                         <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img alt="" src={require('./Images/schedule.png')} style={{ width: 60, height: 60, aspectRatio: 6 / 6 }} /></div>
+                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img alt="" src={require('./Images/easy_to_use.png')} style={{ width: 50, height: 50, aspectRatio: 6 / 6 }} /></div>
                                         <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img alt="" src={require('./Images/cash.png')} style={{ width: 60, height: 60, aspectRatio: 6 / 6 }} /></div>
-                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img alt="" src={require('./Images/trust.png')} style={{ width: 60, height: 60, aspectRatio: 6 / 6 }} /></div>
                                     </div>
                                     <div style={{ display: 'flex', flex: 1, alignItems: 'center', margin: 5, width: '100%' }}>
-                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><h4 style={{ textAlign: 'center' }}>Flexible schedule</h4></div>
-                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><h4 style={{ textAlign: 'center' }}>Lot of jobs</h4></div>
-                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><h4 style={{ textAlign: 'center' }}>Trusted employers</h4></div>
+                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><h4 style={{ textAlign: 'center' }}>Stay flexible</h4></div>
+                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><h4 style={{ textAlign: 'center' }}>Easy to get started</h4></div>
+                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><h4 style={{ textAlign: 'center' }}>Achieve your goals</h4></div>
                                     </div>
                                     <div style={{ display: 'flex', flex: 1, alignItems: 'flex-start', margin: 5, width: '100%' }}>
-                                        <div style={{ flex: 1, display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: 10, paddingTop: 0 }}><p style={{ textAlign: 'center' }}><Typography style={{ textAlign: 'flex-start', marginTop: 10, color: 'gray', fontWeight: '300' }}>With MoverUp, you decide when you want to work, and we will find a job for you. Work from anywhere, anytime.</Typography></p></div>
-                                        <div style={{ flex: 1, display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: 10, paddingTop: 0 }}><p style={{ textAlign: 'center' }}><Typography style={{ textAlign: 'flex-start', marginTop: 10, color: 'gray', fontWeight: '300' }}>Hundreds of businesses hiring thousands of workers every day. We will find the perfect match for you.</Typography></p></div>
-                                        <div style={{ flex: 1, display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: 10, paddingTop: 0 }}><p style={{ textAlign: 'center' }}><Typography style={{ textAlign: 'flex-start', marginTop: 10, color: 'gray', fontWeight: '300' }}>We only work with trusted businesses and so will you.</Typography></p></div>
+                                        <div style={{ flex: 1, display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: 10, paddingTop: 0 }}><p style={{ textAlign: 'center' }}><Typography style={{ textAlign: 'flex-start', marginTop: 10, color: 'gray', fontWeight: '300' }}>Choose your own hours and enjoy the freedom of working from anywhere: near home or in a city you're just visiting.</Typography></p></div>
+                                        <div style={{ flex: 1, display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: 10, paddingTop: 0 }}><p style={{ textAlign: 'center' }}><Typography style={{ textAlign: 'flex-start', marginTop: 10, color: 'gray', fontWeight: '300' }}>Just sign up with your name, email and phone number and get access to all available jobs around you.</Typography></p></div>
+                                        <div style={{ flex: 1, display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: 10, paddingTop: 0 }}><p style={{ textAlign: 'center' }}><Typography style={{ textAlign: 'flex-start', marginTop: 10, color: 'gray', fontWeight: '300' }}>Earn extra money for your goals. Hundreds of businesses are hiring thousands of workers every day. We will find the perfect match just for you.</Typography></p></div>
                                     </div>
                                 </React.Fragment>
                         }

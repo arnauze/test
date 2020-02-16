@@ -141,10 +141,10 @@ export default class Contacts extends React.Component {
                     />
                     <b style={{fontWeight: 'normal'}}>{this.state.success_message}</b>
                     <ButtonBase
-                    style={{width: '75vw', height: '5vh', backgroundColor: '#F9F9F9', marginTop: '2.5vh', marginBottom: '2.5vh', outline: 'none'}}
+                    style={{width: '75vw', height: '5vh', backgroundColor: '#F9F9F9', marginTop: '2.5vh', marginBottom: '2.5vh', outline: 'none', fontWeight: '600'}}
                     onClick={this.onSubmit}
                     >
-                        <b>Submit</b>
+                        Submit
                     </ButtonBase>
                 </div>
             </div>
