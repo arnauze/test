@@ -3,9 +3,8 @@ import MOVER from './Images/movers.png'
 import Stepper from '@material-ui/core/Stepper'
 import Step from '@material-ui/core/Step'
 import StepLabel from '@material-ui/core/StepLabel'
-import StepContent from '@material-ui/core/StepContent'
 import Typography from '@material-ui/core/Typography';
-import { ButtonBase, Divider } from '@material-ui/core'
+import { ButtonBase } from '@material-ui/core'
 
 // Flexible schedule
 // Easily find ajob (lot of jobs)
@@ -136,8 +135,8 @@ export default class Movers extends React.Component {
                                     Decide when and where you want to work, and we will match you with companies that need you.
                                 </Typography>
                                 <div style={{ flexDirection: 'row', alignItems: 'center', display: 'flex', padding: 10, alignSelf: 'center' }}>
-                                    <img src={require('./Images/add_slot.png')} style={{ width: this.state.type === "column" ? 180 : 270, height: this.state.type === "column" ? 360 : 540, margin: 7 }} />
-                                    <img src={require('./Images/empty_calendar.png')} style={{ width: this.state.type === "column" ? 180 : 270, height: this.state.type === "column" ? 360 : 540, margin: 7 }} />
+                                    <img alt="" src={require('./Images/add_slot.png')} style={{ width: this.state.type === "column" ? 180 : 270, height: this.state.type === "column" ? 360 : 540, margin: 7 }} />
+                                    <img alt="" src={require('./Images/empty_calendar.png')} style={{ width: this.state.type === "column" ? 180 : 270, height: this.state.type === "column" ? 360 : 540, margin: 7 }} />
                                 </div>
                             </Step>
                             <Step key={1} active={true} style={{ display: 'flex', alignItems: 'flex-start', flexDirection: 'column', margin: 20, width: this.state.type === "column" ? '92vw' : 560 }}>
@@ -150,8 +149,8 @@ export default class Movers extends React.Component {
                                     We will match you with several companies, and you can choose the job that fits you best.
                                 </Typography>
                                 <div style={{ flexDirection: 'row', alignItems: 'center', display: 'flex', padding: 10, alignSelf: 'center' }}>
-                                    <img src={require('./Images/list_with_requests.png')} style={{ width: this.state.type === "column" ? 180 : 270, height: this.state.type === "column" ? 360 : 540, margin: 7 }} />
-                                    <img src={require('./Images/confirm_job.png')} style={{ width: this.state.type === "column" ? 180 : 270, height: this.state.type === "column" ? 360 : 540, margin: 7 }} />
+                                    <img alt="" src={require('./Images/list_with_requests.png')} style={{ width: this.state.type === "column" ? 180 : 270, height: this.state.type === "column" ? 360 : 540, margin: 7 }} />
+                                    <img alt="" src={require('./Images/confirm_job.png')} style={{ width: this.state.type === "column" ? 180 : 270, height: this.state.type === "column" ? 360 : 540, margin: 7 }} />
                                 </div>
                             </Step>
                             <Step key={2} active={true} style={{ display: 'flex', alignItems: 'flex-start', flexDirection: 'column', margin: 20, width: this.state.type === "column" ? '92vw' : 560 }}>
@@ -180,9 +179,3 @@ export default class Movers extends React.Component {
     }
 
 }
-
-const classes = {
-    dividerColor: {
-        color: 'black',
-    },
-};

@@ -8,7 +8,6 @@ import Business from "./Business"
 import Policies from "./Policies"
 import Terms from "./Terms"
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Dropdown } from 'react-bootstrap'
 import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom'
 
 // Create routes for pages
@@ -168,7 +167,7 @@ class App extends React.Component {
 													style={{ flex: 3, display: 'flex', justifyContent: 'center', outline: 'none', margin: 5 }}
 													disableRipple={true}
 												>
-													<Link to="/movers" onClick={() => this.setState({ text: "For movers", contacts: false })} style={{ textDecoration: 'none', color: 'black', fontWeight: '600', color: this.state.text === "For movers" ? 'orange' : 'black' }}>
+													<Link to="/movers" onClick={() => this.setState({ text: "For movers", contacts: false })} style={{ textDecoration: 'none', fontWeight: '600', color: this.state.text === "For movers" ? 'orange' : 'black' }}>
 														I need a job
 													</Link>
 												</ButtonBase>
@@ -176,7 +175,7 @@ class App extends React.Component {
 													style={{ flex: 3, display: 'flex', justifyContent: 'center', outline: 'none', margin: 5 }}
 													disableRipple={true}
 												>
-													<Link to="/business" onClick={() => this.setState({ text: "For business", contacts: false })} style={{ textDecoration: 'none', color: 'black', fontWeight: '600', color: this.state.text === "For business" ? 'orange' : 'black' }}>
+													<Link to="/business" onClick={() => this.setState({ text: "For business", contacts: false })} style={{ textDecoration: 'none', fontWeight: '600', color: this.state.text === "For business" ? 'orange' : 'black' }}>
 														I need a mover
 													</Link>
 												</ButtonBase>
@@ -188,7 +187,7 @@ class App extends React.Component {
 														style={{ flex: 3, display: 'flex', justifyContent: 'center', outline: 'none', margin: 5 }}
 														disableRipple={true}
 													>
-														<Link to="/movers" onClick={() => this.setState({ text: "For movers", contacts: false })} style={{ textDecoration: 'none', color: 'black', fontWeight: '600', color: this.state.text === "For movers" ? 'orange' : 'black' }}>
+														<Link to="/movers" onClick={() => this.setState({ text: "For movers", contacts: false })} style={{ textDecoration: 'none', fontWeight: '600', color: this.state.text === "For movers" ? 'orange' : 'black' }}>
 															I need a job
 														</Link>
 													</ButtonBase>
@@ -196,7 +195,7 @@ class App extends React.Component {
 														style={{ flex: 3, display: 'flex', justifyContent: 'center', outline: 'none', margin: 5 }}
 														disableRipple={true}
 													>
-														<Link to="/business" onClick={() => this.setState({ text: "For business", contacts: false })} style={{ textDecoration: 'none', color: 'black', fontWeight: '600', color: this.state.text === "For business" ? 'orange' : 'black' }}>
+														<Link to="/business" onClick={() => this.setState({ text: "For business", contacts: false })} style={{ textDecoration: 'none', fontWeight: '600', color: this.state.text === "For business" ? 'orange' : 'black' }}>
 															I need a mover
 														</Link>
 													</ButtonBase>
