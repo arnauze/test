@@ -6,6 +6,7 @@ import StepLabel from '@material-ui/core/StepLabel'
 import StepContent from '@material-ui/core/StepContent'
 import Typography from '@material-ui/core/Typography';
 import { ButtonBase, Divider } from '@material-ui/core'
+import { NavLink } from 'react-router-dom'
 
 // Flexible schedule
 // Easily find ajob (lot of jobs)
@@ -44,30 +45,43 @@ export default class Movers extends React.Component {
     }
 
     render() {
+        console.log(this.props)
         return (
             <React.Fragment>
                 <div style={{ minHeight: '75vh', width: '100vw', display: 'flex', alignItems: 'center', left: 0, position: 'relative', backgroundImage: 'url(' + MOVER + ')', backgroundPosition: 'center', backgroundSize: 'cover', flexDirection: "column", marginTop: '8vh', justifyContent: 'center' }}>
-                    <div style={{width: this.state.type === "column" ? '90vw' : '70vw', display: 'flex', alignItems: 'center', flexDirection: this.state.type, justifyContent: 'center'}} >
+                    <div style={{ width: this.state.type === "column" ? '90vw' : '70vw', display: 'flex', alignItems: 'center', flexDirection: this.state.type, justifyContent: 'center' }} >
                         <div style={{ display: 'flex', flex: 7, alignItems: 'center', flexDirection: 'column', minHeight: '30vh', justifyContent: 'space-evenly' }}>
                             <b style={{ textAlign: 'center', margin: 7, fontSize: this.state.type === 'column' ? 40 : 60, fontWeight: '600' }}>Mover<b style={{ color: 'orange', fontWeight: '600' }}>Up</b> <br />Jobs for movers!</b>
                             <b style={{ textAlign: 'center', fontWeight: 'normal', margin: 7, fontSize: this.state.type === 'column' ? 20 : 25, }}>
-                            You can be your own boss and enjoy the flexibility of choosing when, where, and how much you earn. All you need is a smartphone to start making money.<br /> It’s that simple.
+                                You can be your own boss and enjoy the flexibility of choosing when, where, and how much you earn. All you need is a smartphone to start making money.<br /> It’s that simple.
                             </b>
                         </div>
                         <div style={{ flex: 3 }}>
-                            <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', minHeight: '15vh', justifyContent: 'space-around' }}>
-                                <ButtonBase style={{ outline: 'none', margin: 7 }} onClick={() => window.open("https://play.google.com/store/apps/details?id=com.moverup.mover")}>
-                                    <img alt="" src={require('./Images/apple_logo.png')} style={{ width: this.state.logo_width, height: this.state.logo_height }} />
-                                </ButtonBase>
-                                <ButtonBase style={{ outline: 'none', margin: 7 }} onClick={() => window.open("https://testflight.apple.com/join/lue7aG4i")}>
-                                    <img alt="" src={require('./Images/android_logo.png')} style={{ width: this.state.logo_width, height: this.state.logo_height }} />
-                                </ButtonBase>
+                            <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'space-around' }}>
+                                <b style={{ textAlign: 'center', margin: 7, marginBottom: 0, fontSize: 30, fontWeight: '600' }}>App for movers</b>
+                                <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', minHeight: '15vh', justifyContent: 'space-around' }}>
+                                    <ButtonBase style={{ outline: 'none', margin: 7 }} onClick={() => window.open("https://play.google.com/store/apps/details?id=com.moverup.formovers")}>
+                                        <img alt="" src={require('./Images/apple_logo.png')} style={{ width: this.state.logo_width, height: this.state.logo_height }} />
+                                    </ButtonBase>
+                                    <ButtonBase style={{ outline: 'none', margin: 7 }} onClick={() => window.open("https://testflight.apple.com/join/lue7aG4i")}>
+                                        <img alt="" src={require('./Images/android_logo.png')} style={{ width: this.state.logo_width, height: this.state.logo_height }} />
+                                    </ButtonBase>
+                                </div>
+                                <NavLink
+                                    to="/business"
+                                    onClick={() => this.props.changePage("For business")}
+                                    style={{
+                                        color: "black"
+                                    }}
+                                >
+                                    Are you a business ?
+                                </NavLink>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div style={{ minHeight: '35vh', width: '100vw', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', borderBottom: '1px solid lightgray', paddingBottom: 50 }}>
-                    <div style={{maxWidth: 960, display: 'flex', flexDirection: 'column', alignItems: 'center', margin: 7 }}>
+                    <div style={{ maxWidth: 960, display: 'flex', flexDirection: 'column', alignItems: 'center', margin: 7 }}>
                         <div style={{ padding: 20, marginTop: 20 }}>
                             <Typography style={{ textAlign: 'center', fontWeight: '600', fontSize: this.state.type === 'column' ? 40 : 60 }}>
                                 Why use us?
