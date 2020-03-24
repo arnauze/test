@@ -50,15 +50,15 @@ export default class Business extends React.Component {
                             this.state.type === 'row' ?
                                 <React.Fragment>
                                     <div style={{ display: 'flex', flex: 7, alignItems: 'center', flexDirection: 'column', minHeight: '30vh', justifyContent: 'space-evenly' }}>
-                                        <b style={{ textAlign: 'center', margin: 7, fontSize: this.state.type === 'column' ? 40 : 60, fontWeight: '600' }}>Mover<b style={{ fontWeight: '600', color: 'orange' }}>Up</b><br />More movers!</b>
-                                        <b style={{ textAlign: 'center', fontWeight: 'normal', margin: 7, fontSize: this.state.type === 'column' ? 20 : 25, }}>
+                                        <h1 style={{ textAlign: 'center', margin: 7, fontSize: this.state.type === 'column' ? 40 : 60, fontWeight: '600' }}>Mover<b style={{ fontWeight: '600', color: 'orange' }}>Up</b><br />More movers!</h1>
+                                        <h3 style={{ textAlign: 'center', fontWeight: 'normal', margin: 7, fontSize: this.state.type === 'column' ? 20 : 25, }}>
                                             MoverUp removes the hassle of finding and hiring trusted movers.<br />
                                             Download the app, movers are here.
-                                        </b>
+                                        </h3>
                                     </div>
                                     <div style={{ flex: 3 }}>
                                         <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'space-around' }}>
-                                            <b style={{ textAlign: 'center', margin: 7, marginBottom: 0, fontSize: 30, fontWeight: '600' }}>App for business</b>
+                                            <h3 style={{ textAlign: 'center', margin: 7, marginBottom: 0, fontSize: 30, fontWeight: '600' }}>App for business</h3>
                                             <div style={{ minHeight: '15vh', display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'space-around' }}>
                                                 <ButtonBase style={{ outline: 'none', margin: 7 }} onClick={() => window.open("https://play.google.com/store/apps/details?id=com.moverup.company")}>
                                                     <img alt="" src={require('./Images/apple_logo.png')} style={{ width: this.state.logo_width, height: this.state.logo_height }} />
@@ -82,15 +82,15 @@ export default class Business extends React.Component {
                                 :
                                 <React.Fragment>
                                     <div style={{ display: 'flex', flex: 7, alignItems: 'center', flexDirection: 'column', minHeight: '30vh', justifyContent: 'space-evenly' }}>
-                                        <b style={{ textAlign: 'center', margin: 7, fontSize: this.state.type === 'column' ? 40 : 60, fontWeight: '600' }}>Mover<b style={{ fontWeight: '600', color: 'orange' }}>Up</b><br />More movers!</b>
-                                        <b style={{ textAlign: 'center', fontWeight: 'normal', margin: 7, fontSize: this.state.type === 'column' ? 20 : 25 }}>
+                                        <h1 style={{ textAlign: 'center', margin: 7, fontSize: this.state.type === 'column' ? 40 : 60, fontWeight: '600' }}>Mover<b style={{ fontWeight: '600', color: 'orange' }}>Up</b><br />More movers!</h1>
+                                        <h3 style={{ textAlign: 'center', fontWeight: 'normal', margin: 7, fontSize: this.state.type === 'column' ? 20 : 25 }}>
                                             MoverUp removes the hassle of finding and hiring trusted movers.<br />
                                             Download the app, movers are here.
-                                        </b>
+                                        </h3>
                                     </div>
                                     <div style={{ flex: 3 }}>
                                         <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'space-around' }}>
-                                            <b style={{ textAlign: 'center', margin: 7, marginBottom: 0, fontSize: 30, fontWeight: '600' }}>App for business</b>
+                                            <h3 style={{ textAlign: 'center', margin: 7, marginBottom: 0, fontSize: 30, fontWeight: '600' }}>App for business</h3>
                                             <div style={{ minHeight: '15vh', display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'space-around' }}>
                                                 <ButtonBase style={{ outline: 'none', margin: 7 }} onClick={() => window.open("https://play.google.com/store/apps/details?id=com.moverup.company")}>
                                                     <img alt="" src={require('./Images/apple_logo.png')} style={{ width: this.state.logo_width, height: this.state.logo_height }} />
@@ -117,9 +117,9 @@ export default class Business extends React.Component {
                 <div style={{ minHeight: '35vh', width: '100vw', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', borderBottom: '1px solid lightgray', paddingBottom: 50 }}>
                     <div style={{ maxWidth: 960, display: 'flex', flexDirection: 'column', alignItems: 'center', margin: 7 }}>
                         <div style={{ padding: 20, marginTop: 20 }}>
-                            <Typography style={{ textAlign: 'center', fontWeight: '600', fontSize: this.state.type === 'column' ? 40 : 60 }}>
+                            <h1 style={{ textAlign: 'center', fontWeight: '600', fontSize: this.state.type === 'column' ? 40 : 60 }}>
                                 Why use us?
-                            </Typography>
+                            </h1>
                         </div>
                         <div style={{ height: 5, width: 80, backgroundColor: 'orange', marginBottom: 50, marginTop: 10 }} />
                         {
@@ -127,19 +127,19 @@ export default class Business extends React.Component {
                                 <div style={{ minHeight: '35vh', display: 'flex', flexDirection: 'column' }}>
                                     <div style={{ display: 'flex', flex: 1, alignItems: 'center', width: '100%', flexDirection: 'column', margin: 5 }}>
                                         <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img alt="" src={require('./Images/schedule.png')} style={{ width: 60, height: 60, aspectRatio: 6 / 6 }} /></div>
-                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><h4 style={{ textAlign: 'center' }}>Unlimited workforce</h4></div>
+                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><h3 style={{ textAlign: 'center' }}>Unlimited workforce</h3></div>
                                         <div style={{ flex: 1, display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: 5 }}><p style={{ textAlign: 'center' }}><Typography style={{ textAlign: 'flex-start', marginTop: 10, color: 'gray', fontWeight: '300' }}>Thousands of workers looking for jobs everyday. You will never struggle finding the right team again.</Typography></p></div>
                                     </div>
                                     <div style={{ display: 'flex', flex: 1, alignItems: 'center', width: '100%', flexDirection: 'column', margin: 5 }}>
                                         <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img alt="" src={require('./Images/cash.png')} style={{ width: 60, height: 60, aspectRatio: 6 / 6 }} /></div>
-                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><h4 style={{ textAlign: 'center' }}>Manage efficiently</h4></div>
+                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><h3 style={{ textAlign: 'center' }}>Manage efficiently</h3></div>
                                         <div style={{ flex: 1, display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: 5 }}><p style={{ textAlign: 'center' }}><Typography style={{ textAlign: 'flex-start', marginTop: 10, color: 'gray', fontWeight: '300' }}>
 
                                             Spend less time on back-and-forth between you and potential worker. You only see those available for your specific job. Have a full overview of your current and planned jobs schedule. </Typography></p></div>
                                     </div>
                                     <div style={{ display: 'flex', flex: 1, alignItems: 'center', width: '100%', flexDirection: 'column', margin: 5 }}>
                                         <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img alt="" src={require('./Images/trust.png')} style={{ width: 60, height: 60, aspectRatio: 6 / 6 }} /></div>
-                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><h4 style={{ textAlign: 'center' }}>Trusted workers</h4></div>
+                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><h3 style={{ textAlign: 'center' }}>Trusted workers</h3></div>
                                         <div style={{ flex: 1, display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: 5 }}><p style={{ textAlign: 'center' }}><Typography style={{ textAlign: 'flex-start', marginTop: 10, color: 'gray', fontWeight: '300' }}>Candidates on MoverUp marketplace are rated and reviewed. You will be matched with high-quality, actively looking, ready to go workers. </Typography></p></div>
                                     </div>
                                 </div>
@@ -151,9 +151,9 @@ export default class Business extends React.Component {
                                         <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img alt="" src={require('./Images/trust.png')} style={{ width: 60, height: 60, aspectRatio: 6 / 6 }} /></div>
                                     </div>
                                     <div style={{ display: 'flex', flex: 1, alignItems: 'center', margin: 5, width: '100%' }}>
-                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><h4 style={{ textAlign: 'center' }}>Unlimited workforce</h4></div>
-                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><h4 style={{ textAlign: 'center' }}>Manage efficiently</h4></div>
-                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><h4 style={{ textAlign: 'center' }}>Trusted workers</h4></div>
+                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><h3 style={{ textAlign: 'center' }}>Unlimited workforce</h3></div>
+                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><h3 style={{ textAlign: 'center' }}>Manage efficiently</h3></div>
+                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><h3 style={{ textAlign: 'center' }}>Trusted workers</h3></div>
                                     </div>
                                     <div style={{ display: 'flex', flex: 1, alignItems: 'flex-start', margin: 5, width: '100%' }}>
                                         <div style={{ flex: 1, display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: 5 }}><p style={{ textAlign: 'center' }}><Typography style={{ textAlign: 'flex-start', marginTop: 10, color: 'gray', fontWeight: '300' }}>Thousands of workers looking for jobs everyday. You will never struggle finding the right team again.</Typography></p></div>
@@ -168,9 +168,9 @@ export default class Business extends React.Component {
                     <div style={{ width: '100vw', alignItems: 'center', justifyContent: 'center' }}>
                         <Stepper orientation="vertical" activeStep={null} connector={null} style={{ width: '100vw', alignItems: 'center', display: 'flex', justifyContent: 'space-evenly' }}>
                             <div style={{ padding: 20, marginTop: 20 }}>
-                                <Typography style={{ textAlign: 'center', fontWeight: '600', fontSize: this.state.type === 'column' ? 40 : 60 }}>
+                                <h1 style={{ textAlign: 'center', fontWeight: '600', fontSize: this.state.type === 'column' ? 40 : 60 }}>
                                     How it works:
-                                </Typography>
+                                </h1>
                                 <Typography style={{ textAlign: 'center', color: 'gray', fontWeight: '300' }}>
                                     3 simple steps to get things done
                                 </Typography>
@@ -180,7 +180,7 @@ export default class Business extends React.Component {
                                 <div style={{ flexDirection: 'row', alignItems: 'center', display: 'flex' }}>
                                     <StepLabel StepIconComponent={() => Comp({ number: 1 })}>
                                     </StepLabel>
-                                    <h4>Create your jobs</h4>
+                                    <h3>Create your jobs</h3>
                                 </div>
                                 <Typography style={{ textAlign: 'flex-start', marginTop: 10, color: 'gray', fontWeight: '300' }}>
                                     Choose the type of jobs and how many workers you need, as well as any extra costs (bulky items, long carry, stairs, ...)
@@ -194,7 +194,7 @@ export default class Business extends React.Component {
                                 <div style={{ flexDirection: 'row', alignItems: 'center', display: 'flex' }}>
                                     <StepLabel StepIconComponent={() => Comp({ number: 2 })}>
                                     </StepLabel>
-                                    <h4>Choose your workers and start the job</h4>
+                                    <h3>Choose your workers and start the job</h3>
                                 </div>
                                 <Typography style={{ textAlign: 'flex-start', marginTop: 10, color: 'gray', fontWeight: '300' }}>
                                     We will match you with several workers for each position, and you decide who fits best with your team.<br />
@@ -209,7 +209,7 @@ export default class Business extends React.Component {
                                 <div style={{ flexDirection: 'row', alignItems: 'center', display: 'flex' }}>
                                     <StepLabel StepIconComponent={() => Comp({ number: 3 })}>
                                     </StepLabel>
-                                    <h4>Finish the job and leave a rating</h4>
+                                    <h3>Finish the job and leave a rating</h3>
                                 </div>
                                 <Typography style={{ textAlign: 'flex-start', marginTop: 10, color: 'gray', fontWeight: '300' }}>
                                     Tell us about your experience working with our helpers, so we can find an even better match next time you use us.

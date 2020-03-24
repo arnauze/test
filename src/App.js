@@ -181,7 +181,7 @@ class App extends React.Component {
 										onClick={() => this.setState({ text: "For movers", contacts: false })}
 									>
 										<Link to="/" style={{ textDecoration: 'none', color: 'black', fontWeight: '600' }}>
-											Mover<b style={{ color: 'orange', fontWeight: '600' }}>Up</b>
+											<h2 style={{fontSize: this.state.isSmall ? 21 : null, margin: 0}}>Mover<b style={{ color: 'orange', fontWeight: '600' }}>Up</b></h2>
 										</Link>
 									</ButtonBase>
 									<div style={{flex: 6, display: 'flex'}}>
@@ -192,16 +192,16 @@ class App extends React.Component {
 													style={{ flex: 3, display: 'flex', justifyContent: 'center', outline: 'none', margin: 5 }}
 													disableRipple={true}
 												>
-													<Link to="/movers" onClick={() => this.setState({ text: "For movers", contacts: false })} style={{ textDecoration: 'none', color: 'black', fontWeight: '600', color: this.state.text === "For movers" ? 'orange' : 'black' }}>
-														For movers
+													<Link to="/movers" onClick={() => this.setState({ text: "For movers", contacts: false })} style={{ textDecoration: 'none'}}>
+														<h3 style={{color: this.state.text === "For movers" ? 'orange' : 'black', fontSize: 18, margin: 0 }}>For movers</h3>
 													</Link>
 												</ButtonBase>
 												<ButtonBase
 													style={{ flex: 4, display: 'flex', justifyContent: 'center', outline: 'none', margin: 5 }}
 													disableRipple={true}
 												>
-													<Link to="/business" onClick={() => this.setState({ text: "For business", contacts: false })} style={{ textDecoration: 'none', color: 'black', fontWeight: '600', color: this.state.text === "For business" ? 'orange' : 'black' }}>
-														For business
+													<Link to="/business" onClick={() => this.setState({ text: "For business", contacts: false })} style={{ textDecoration: 'none', fontWeight: '600', color: this.state.text === "For business" ? 'orange' : 'black' }}>
+														<h3 style={{color: this.state.text === "For business" ? 'orange' : 'black', fontSize: 18, margin: 0 }}>For business</h3>
 													</Link>
 												</ButtonBase>
 											</React.Fragment>
@@ -213,7 +213,7 @@ class App extends React.Component {
 														disableRipple={true}
 													>
 														<Link to="/movers" onClick={() => this.setState({ text: "For movers", contacts: false })} style={{ textDecoration: 'none', color: 'black', fontWeight: '600', color: this.state.text === "For movers" ? 'orange' : 'black' }}>
-															For movers
+															<h3 style={{color: this.state.text === "For movers" ? 'orange' : 'black', margin: 0, fontSize: 18 }}>For movers</h3>
 														</Link>
 													</ButtonBase>
 													<ButtonBase
@@ -221,7 +221,7 @@ class App extends React.Component {
 														disableRipple={true}
 													>
 														<Link to="/business" onClick={() => this.setState({ text: "For business", contacts: false })} style={{ textDecoration: 'none', color: 'black', fontWeight: '600', color: this.state.text === "For business" ? 'orange' : 'black' }}>
-															For business
+															<h3 style={{color: this.state.text === "For business" ? 'orange' : 'black', fontSize: 18, margin: 0 }}>For business</h3>
 														</Link>
 													</ButtonBase>
 												</div>
