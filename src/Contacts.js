@@ -8,7 +8,7 @@ Amplify.configure({
       endpoints: [
         {
             name: "MoverUp",
-            endpoint: "https://u7e32avpt0.execute-api.us-west-1.amazonaws.com/test/api"
+            endpoint: "https://wqi4r0h428.execute-api.us-west-2.amazonaws.com/test/api"
         }
     ]
     }
