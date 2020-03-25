@@ -3,16 +3,13 @@ import MOVER from './Images/movers.png'
 import Stepper from '@material-ui/core/Stepper'
 import Step from '@material-ui/core/Step'
 import StepLabel from '@material-ui/core/StepLabel'
-import StepContent from '@material-ui/core/StepContent'
 import Typography from '@material-ui/core/Typography';
-import { ButtonBase, Divider } from '@material-ui/core'
+import { ButtonBase } from '@material-ui/core'
 import { NavLink } from 'react-router-dom'
 
 // Flexible schedule
 // Easily find ajob (lot of jobs)
 // Trusted employers
-
-// if width < 750 reduce size of image
 
 export default class Movers extends React.Component {
 
@@ -61,10 +58,10 @@ export default class Movers extends React.Component {
                                 <h3 style={{ textAlign: 'center', margin: 7, marginBottom: 0, fontSize: 30, fontWeight: '600' }}>App for movers</h3>
                                 <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', minHeight: '15vh', justifyContent: 'space-around' }}>
                                     <ButtonBase style={{ outline: 'none', margin: 7 }} onClick={() => window.open("https://play.google.com/store/apps/details?id=com.moverup.formovers")}>
-                                        <img alt="" src={require('./Images/apple_logo.png')} style={{ width: this.state.logo_width, height: this.state.logo_height }} />
+                                        <img alt="MoverUp" src={require('./Images/apple_logo.png')} style={{ width: this.state.logo_width, height: this.state.logo_height }} />
                                     </ButtonBase>
                                     <ButtonBase style={{ outline: 'none', margin: 7 }} onClick={() => window.open("https://testflight.apple.com/join/lue7aG4i")}>
-                                        <img alt="" src={require('./Images/android_logo.png')} style={{ width: this.state.logo_width, height: this.state.logo_height }} />
+                                        <img alt="MoverUp" src={require('./Images/android_logo.png')} style={{ width: this.state.logo_width, height: this.state.logo_height }} />
                                     </ButtonBase>
                                 </div>
                                 <NavLink
@@ -92,17 +89,17 @@ export default class Movers extends React.Component {
                             this.state.type === 'column' ?
                                 <div style={{ minHeight: '35vh', display: 'flex', flexDirection: 'column' }}>
                                     <div style={{ display: 'flex', flex: 1, alignItems: 'center', width: '100%', flexDirection: 'column', margin: 5 }}>
-                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img alt="" src={require('./Images/schedule.png')} style={{ width: 60, height: 60, aspectRatio: 6 / 6 }} /></div>
+                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img alt="MoverUp" src={require('./Images/schedule.png')} style={{ width: 60, height: 60, aspectRatio: 6 / 6 }} /></div>
                                         <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><h3 style={{ textAlign: 'center' }}>Stay flexible</h3></div>
                                         <div style={{ flex: 2, display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: 10, paddingTop: 0 }}><p style={{ textAlign: 'center' }}><Typography style={{ textAlign: 'flex-start', marginTop: 10, color: 'gray', fontWeight: '300' }}>Choose your own hours and enjoy the freedom of working from anywhere: near home or in a city you're just visiting.</Typography></p></div>
                                     </div>
                                     <div style={{ display: 'flex', flex: 1, alignItems: 'center', width: '100%', flexDirection: 'column', margin: 5 }}>
-                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img alt="" src={require('./Images/easy_to_use.png')} style={{ width: 50, height: 50, aspectRatio: 6 / 6 }} /></div>
+                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img alt="MoverUp" src={require('./Images/easy_to_use.png')} style={{ width: 50, height: 50, aspectRatio: 6 / 6 }} /></div>
                                         <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><h3 style={{ textAlign: 'center' }}>Easy to get started</h3></div>
                                         <div style={{ flex: 2, display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: 10, paddingTop: 0 }}><p style={{ textAlign: 'center' }}><Typography style={{ textAlign: 'flex-start', marginTop: 10, color: 'gray', fontWeight: '300' }}>Just sign up with your name, email and phone number and get access to all available jobs around you.</Typography></p></div>
                                     </div>
                                     <div style={{ display: 'flex', flex: 1, alignItems: 'center', width: '100%', flexDirection: 'column', margin: 5 }}>
-                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img alt="" src={require('./Images/cash.png')} style={{ width: 60, height: 60, aspectRatio: 6 / 6 }} /></div>
+                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img alt="MoverUp" src={require('./Images/cash.png')} style={{ width: 60, height: 60, aspectRatio: 6 / 6 }} /></div>
                                         <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><h3 style={{ textAlign: 'center' }}>Achieve your goals</h3></div>
                                         <div style={{ flex: 2, display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: 10, paddingTop: 0 }}><p style={{ textAlign: 'center' }}><Typography style={{ textAlign: 'flex-start', marginTop: 10, color: 'gray', fontWeight: '300' }}>Earn extra money for your goals. Hundreds of businesses are hiring thousands of workers every day. We will find the perfect match just for you.</Typography></p></div>
                                     </div>
@@ -110,9 +107,9 @@ export default class Movers extends React.Component {
                                 :
                                 <React.Fragment>
                                     <div style={{ display: 'flex', flex: 1, alignItems: 'center', margin: 5, width: '100%' }}>
-                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img alt="" src={require('./Images/schedule.png')} style={{ width: 60, height: 60, aspectRatio: 6 / 6 }} /></div>
-                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img alt="" src={require('./Images/easy_to_use.png')} style={{ width: 50, height: 50, aspectRatio: 6 / 6 }} /></div>
-                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img alt="" src={require('./Images/cash.png')} style={{ width: 60, height: 60, aspectRatio: 6 / 6 }} /></div>
+                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img alt="MoverUp" src={require('./Images/schedule.png')} style={{ width: 60, height: 60, aspectRatio: 6 / 6 }} /></div>
+                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img alt="MoverUp" src={require('./Images/easy_to_use.png')} style={{ width: 50, height: 50, aspectRatio: 6 / 6 }} /></div>
+                                        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><img alt="MoverUp" src={require('./Images/cash.png')} style={{ width: 60, height: 60, aspectRatio: 6 / 6 }} /></div>
                                     </div>
                                     <div style={{ display: 'flex', flex: 1, alignItems: 'center', margin: 5, width: '100%' }}>
                                         <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><h3 style={{ textAlign: 'center' }}>Stay flexible</h3></div>
@@ -150,8 +147,8 @@ export default class Movers extends React.Component {
                                     Decide when and where you want to work, and we will match you with companies that need you.
                                 </Typography>
                                 <div style={{ flexDirection: 'row', alignItems: 'center', display: 'flex', padding: 10, alignSelf: 'center' }}>
-                                    <img src={require('./Images/add_slot.png')} style={{ width: this.state.type === "column" ? 180 : 270, height: this.state.type === "column" ? 360 : 540, margin: 7 }} />
-                                    <img src={require('./Images/empty_calendar.png')} style={{ width: this.state.type === "column" ? 180 : 270, height: this.state.type === "column" ? 360 : 540, margin: 7 }} />
+                                    <img alt="MoverUp" src={require('./Images/add_slot.png')} style={{ width: this.state.type === "column" ? 180 : 270, height: this.state.type === "column" ? 360 : 540, margin: 7 }} />
+                                    <img alt="MoverUp" src={require('./Images/empty_calendar.png')} style={{ width: this.state.type === "column" ? 180 : 270, height: this.state.type === "column" ? 360 : 540, margin: 7 }} />
                                 </div>
                             </Step>
                             <Step key={1} active={true} style={{ display: 'flex', alignItems: 'flex-start', flexDirection: 'column', margin: 20, width: this.state.type === "column" ? '92vw' : 560 }}>
@@ -164,8 +161,8 @@ export default class Movers extends React.Component {
                                     We will match you with several companies, and you can choose the job that fits you best.
                                 </Typography>
                                 <div style={{ flexDirection: 'row', alignItems: 'center', display: 'flex', padding: 10, alignSelf: 'center' }}>
-                                    <img src={require('./Images/list_with_requests.png')} style={{ width: this.state.type === "column" ? 180 : 270, height: this.state.type === "column" ? 360 : 540, margin: 7 }} />
-                                    <img src={require('./Images/confirm_job.png')} style={{ width: this.state.type === "column" ? 180 : 270, height: this.state.type === "column" ? 360 : 540, margin: 7 }} />
+                                    <img alt="MoverUp" src={require('./Images/list_with_requests.png')} style={{ width: this.state.type === "column" ? 180 : 270, height: this.state.type === "column" ? 360 : 540, margin: 7 }} />
+                                    <img alt="MoverUp" src={require('./Images/confirm_job.png')} style={{ width: this.state.type === "column" ? 180 : 270, height: this.state.type === "column" ? 360 : 540, margin: 7 }} />
                                 </div>
                             </Step>
                             <Step key={2} active={true} style={{ display: 'flex', alignItems: 'flex-start', flexDirection: 'column', margin: 20, width: this.state.type === "column" ? '92vw' : 560 }}>
@@ -194,9 +191,3 @@ export default class Movers extends React.Component {
     }
 
 }
-
-const classes = {
-    dividerColor: {
-        color: 'black',
-    },
-};

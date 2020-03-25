@@ -156,10 +156,10 @@ class App extends React.Component {
 				<Typography style={{ fontWeight: '600' }}>Apply to be a tester</Typography>
 				<div style={{ display: 'flex', alignItems: 'center', flexDirection: this.state.isSmall ? "column" : 'row', justifyContent: 'space-around' }}>
 					<ButtonBase style={{ outline: 'none', margin: 10 }} onClick={() => this.state.text === "For movers" ? window.open("https://play.google.com/store/apps/details?id=com.moverup.formovers") : window.open("https://play.google.com/store/apps/details?id=com.moverup.company")}>
-						<img alt="" src={require('./Images/apple_logo.png')} style={{ width: 180, height: 55 }} />
+						<img alt="MoverUp" src={require('./Images/apple_logo.png')} style={{ width: 180, height: 55 }} />
 					</ButtonBase>
 					<ButtonBase style={{ outline: 'none', margin: 10 }} onClick={() => this.state.text === "For movers" ? window.open("https://testflight.apple.com/join/lue7aG4i") : window.open("https://testflight.apple.com/join/VzfTqKpZ")}>
-						<img alt="" src={require('./Images/android_logo.png')} style={{ width: 180, height: 55 }} />
+						<img alt="MoverUp" src={require('./Images/android_logo.png')} style={{ width: 180, height: 55 }} />
 					</ButtonBase>
 				</div>
 			</div>
@@ -212,7 +212,7 @@ class App extends React.Component {
 														style={{ flex: 3, display: 'flex', justifyContent: 'center', outline: 'none', margin: 5 }}
 														disableRipple={true}
 													>
-														<Link to="/movers" onClick={() => this.setState({ text: "For movers", contacts: false })} style={{ textDecoration: 'none', color: 'black', fontWeight: '600', color: this.state.text === "For movers" ? 'orange' : 'black' }}>
+														<Link to="/movers" onClick={() => this.setState({ text: "For movers", contacts: false })} style={{ textDecoration: 'none', fontWeight: '600', color: this.state.text === "For movers" ? 'orange' : 'black' }}>
 															<h3 style={{color: this.state.text === "For movers" ? 'orange' : 'black', margin: 0, fontSize: 18 }}>For movers</h3>
 														</Link>
 													</ButtonBase>
@@ -220,7 +220,7 @@ class App extends React.Component {
 														style={{ flex: 3, display: 'flex', justifyContent: 'center', outline: 'none', margin: 5 }}
 														disableRipple={true}
 													>
-														<Link to="/business" onClick={() => this.setState({ text: "For business", contacts: false })} style={{ textDecoration: 'none', color: 'black', fontWeight: '600', color: this.state.text === "For business" ? 'orange' : 'black' }}>
+														<Link to="/business" onClick={() => this.setState({ text: "For business", contacts: false })} style={{ textDecoration: 'none', fontWeight: '600', color: this.state.text === "For business" ? 'orange' : 'black' }}>
 															<h3 style={{color: this.state.text === "For business" ? 'orange' : 'black', fontSize: 18, margin: 0 }}>For business</h3>
 														</Link>
 													</ButtonBase>
