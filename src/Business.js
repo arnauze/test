@@ -42,6 +42,8 @@ export default class Business extends React.Component {
     }
 
     render() {
+        if (this.props.state.text !== "For business")
+            this.props.changePage("For business")
         return (
             <React.Fragment>
                 <div style={{ minHeight: '75vh', width: '100vw', display: 'flex', alignItems: 'center', left: 0, position: 'relative', backgroundImage: 'url(' + BUSINESS + ')', backgroundPosition: 'center', backgroundSize: 'cover', flexDirection: "column", marginTop: '8vh', justifyContent: 'center' }}>

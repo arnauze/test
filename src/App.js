@@ -9,7 +9,7 @@ import Policies from "./Policies"
 import Terms from "./Terms"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Dropdown } from 'react-bootstrap'
-import { BrowserRouter as Router, Link, Switch, Route, useHistory } from 'react-router-dom'
+import { HashRouter as Router, Link, Switch, Route } from 'react-router-dom'
 
 // Create routes for pages
 // Policies
@@ -83,7 +83,7 @@ class App extends React.Component {
 					<Movers changePage={this._changePage} />
 				</Route>
 				<Route path="/business">
-					<Business changePage={this._changePage} />
+					<Business changePage={this._changePage} page="For business" state={this.state}/>
 				</Route>
 				<Route path="/contact">
 					<Contacts />
