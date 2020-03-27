@@ -8,7 +8,6 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "aws-amplify": "^2.2.2",
-    "babel-loader": "^8.0.6",
     "bootstrap": "^4.4.1",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
@@ -17,7 +16,7 @@
     "react-motion": "^0.5.2",
     "react-ratio": "^0.1.5",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.3.0"
+    "react-scripts": "3.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
